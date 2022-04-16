@@ -28,10 +28,7 @@ tooltips.bindTooltip(".animal_tooltip", (t) => "I'm a " + t.dataset.name + "!");
 
 Bind tooltip to HTML element(s)
 ```typescript
-bindTooltip(target: string | HTMLElement, content: TooltipContent, user_options?: TooltipOptions)
-```
-
-```typescript
+tooltips.bindTooltip(target: string | HTMLElement, content: TooltipContent, user_options?: TooltipOptions)
 TooltipContent = string | ((target?: HTMLElement, extraData?: {}, tooltip?: HTMLElement) => string);
 ```
 
@@ -57,11 +54,11 @@ TooltipContent = string | ((target?: HTMLElement, extraData?: {}, tooltip?: HTML
 
 Force tooltip hide
 ```typescript
-hideTooltip(show_animation: boolean)
+tooltips.hideTooltip(show_animation: boolean)
 ```
     
 Change tooltip permanent state
 ```typescript
-setPermanentState(element: HTMLElement, state: boolean)
+tooltips.setPermanentState(element: HTMLElement, state: boolean)
 ```    
     
