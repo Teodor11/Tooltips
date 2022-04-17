@@ -35,8 +35,8 @@ TooltipContent = string | ((target?: HTMLElement, extraData?: {}, tooltip?: HTML
 
 `TooltipOptions` &ndash; object (optional)
 
-| Option name         | Type                    | Default value     | Description                                             |
-| ------------------- | ----------------------- |------------------ | ------------------------------------------------------- |
+| Option name         | Type                      | Default value       | Description                                             |
+| ------------------- | ------------------------- | ------------------  | ------------------------------------------------------- |
 | addAsHtml           | `boolean`                 | `false`             | If true, adds content as HTML, else adds content as normal text. |
 | arrowTarget         | `HTMLElement \| ((target?: HTMLElement) => HTMLElement)` | `null` | Target of tooltip arrow (different than target of tooltip). |
 | callbackFunction    | `Function`                | `null`              | Function to call when tooltip is shown.                 |
@@ -45,7 +45,7 @@ TooltipContent = string | ((target?: HTMLElement, extraData?: {}, tooltip?: HTML
 | extraData           | `{ [key: string]: any }`  | `{}`                | Data for other functions passed in options.             |
 | background          | `string`                  | `"#444"`            | Color of tooltip background.                            |
 | classNames          | `Array<string>`           | `[]`                | Array of classes set in HTML tooltip element.           |
-| textColor           | `string`                  | `"eee"`             | Color of text in tooltip.                               |
+| textColor           | `string`                  | `"#eee"`             | Color of text in tooltip.                               |
 | eventShow           | `string`                  | `"mouseenter"`      | Event showing tooltip.                                  |
 | maxHeight           | `string`                  | `""`                | Max height of tooltip set in CSS.                       |
 | maxWidth            | `string`                  | `""`                | Max width of tooltip set in CSS.                        |
