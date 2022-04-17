@@ -9,9 +9,7 @@ TypeScript light-weight library for showing tooltips.
 Import
 ```typescript
 import { tooltips } from "./tooltips";
-```
-or
-```typescript
+// or
 <script src="./tooltips.js"></script>
 ```
 
@@ -22,14 +20,19 @@ tooltips.bindTooltip("#box", "Hello");
 
 Examples
 ```typescript
-// Tooltip with HTML content
+// #1 Tooltip with HTML content
 tooltips.bindTooltip("#html_tooltip", "<h1>HELLO!</h1>", { addAsHtml: true });
 
-// Tooltip with styling
+// #2 Tooltip with styling
 tooltips.bindTooltip("#tomato", "I'm a tomato!", { background: "tomato", textColor: "black" });
 
-// Tooltip with content depending on target attributes
+// #3 Tooltip with content depending on target attributes
 tooltips.bindTooltip(".animal_tooltip", (t) => "I'm a " + t.dataset.name + "!");
+
+// #4 Tooltip with content depending on target attributes and extra data
+tooltip.bindTooltip(".colored_box", (t, d) =>
+   `<span style="border-bottom: 2px solid ${d.colors[t.dataset.id]};"> Status: ${t.textContent} </span>`,
+   { addAsHtml: true, extraData: { colors: { ok: "limegreen", warn: "orange", err: "red" } } });
 ```
    
 Bind tooltip to HTML element(s)
@@ -48,7 +51,7 @@ TooltipContent = string | ((target?: HTMLElement, extraData?: {}, tooltip?: HTML
 | callbackFunction    | `Function`                | `null`              | Function to call when tooltip is shown.                 |
 | callbackFunctionArgs| `Array<any>`              | `[]`                | Arguments for callbackFunction; can include elements "{target}" and/or "{tooltip}" in order to provide access to target/tooltip elements. |
 | dataset             | `{ [key: string]: TooltipContent }` | `{}`      | Additional data to set in HTML tooltip element.         |
-| extraData           | `{ [key: string]: any }`  | `{}`                | Data for function creating content.                     |
+| extraData           | `{ [key: string]: any }`  | `{}`                | Data for function creating content (see example #4).    |
 | background          | `string`                  | `"#444"`            | Color of tooltip background.                            |
 | classNames          | `Array<string>`           | `[]`                | Array of classes set in HTML tooltip element.           |
 | textColor           | `string`                  | `"#eee"`            | Color of text in tooltip.                               |
