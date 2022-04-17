@@ -2,16 +2,17 @@
 
 TypeScript light-weight library for showing tooltips.
 
-![tooltips](https://user-images.githubusercontent.com/24278460/163690336-dcb9946e-24b2-4dc6-b4db-c092a33ad815.png)
+
+![tooltips-mix](https://user-images.githubusercontent.com/24278460/163706288-5a281caf-9432-4c19-9811-589930733876.png)
 
 
-Import<br/>
+Import
 ```typescript
 import { tooltips } from "./tooltips";
 ```
-or:
+or
 ```typescript
-<script src="./tooltips.ts"></script>
+<script src="./tooltips.js"></script>
 ```
 
 Basic usage<br/>
